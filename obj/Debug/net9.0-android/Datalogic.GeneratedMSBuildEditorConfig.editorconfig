@@ -58,3 +58,15 @@ build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = Datalogic.Views.DetailsPage.xaml
 build_metadata.AdditionalFiles.TargetPath = Views\DetailsPage.xaml
 build_metadata.AdditionalFiles.RelativePath = Views\DetailsPage.xaml
+
+[C:/Programacion/Datalogic/Views/OrdersPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Datalogic.Views.OrdersPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\OrdersPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\OrdersPage.xaml
+
+[C:/Programacion/Datalogic/Views/ProductsPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Datalogic.Views.ProductsPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\ProductsPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\ProductsPage.xaml
