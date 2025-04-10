@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:model="clr-namespace:Datalogic.Models"
+             xmlns:viewmodel="clr-namespace:Datalogic.ViewModels"
+             x:Class="Datalogic.MainPage"
+             x:DataType="viewmodel:MonkeysViewModel"
+             Title="{Binding Title}">
+
+
+    <Grid RowDefinitions="Auto,*,Auto" 
+          ColumnDefinitions="*,*" 
+          ColumnSpacing="5"
+          RowSpacing="0">
+
+        <SearchBar Placeholder="Search items..." Grid.Row="0" Grid.ColumnSpan="3"/>
+        <ScrollView Grid.Row="1" Grid.ColumnSpan="3">
+            <CollectionView 
+                BackgroundColor="Transparent"
+                
+                ItemsSource="{Binding Monkeys}"
+                SelectionMode="None">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate x:DataType="model:Monkey">
+                        <Grid Padding="10">
+
+                            <Frame HeightRequest="125">
+
+                                <Frame.GestureRecognizers>
+                                    <TapGestureRecognizer CommandParameter="{Binding .}"
+                          Command="{Binding Source={RelativeSource 
+                            AncestorType={x:Type viewmodel:MonkeysViewModel}},Path=GoToDetailsCommand}" />
+                                </Frame.GestureRecognizers>
+
+                                <Grid Padding="0"
+                                    ColumnDefinitions="125,*">
+                                    <Image Aspect="AspectFill"
+                                        Source="{Binding Image}"
+                                        WidthRequest="125"/>
+
+                                    <VerticalStackLayout Grid.Column="1" 
+                                         Padding="10"
+                                         VerticalOptions="Center">
+                                        <Label Text="{Binding Name}" FontSize="18" />
+                                        <Label Text="{Binding Location}" FontSize="10" />
+                                    </VerticalStackLayout>
+                                </Grid>
+                            </Frame>
+                        </Grid>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </ScrollView>
+
+        <ActivityIndicator 
+              Grid.ColumnSpan="2"
+              IsVisible="{Binding IsBusy}"
+              IsRunning="{Binding IsBusy}"
+              Color="Yellow"
+              WidthRequest="50"
+              HeightRequest="50"
+              HorizontalOptions="Center"   
+              VerticalOptions="Center"/>
+
+        <StackLayout Grid.Row="2"
+                     HorizontalOptions="Center"
+                     Spacing="20"
+                     Padding="0,10">
+            <Button Text="Get Monkeys" 
+                  Command="{Binding GetMonkeysCommand}"
+                  IsEnabled="{Binding IsNotBusy}"
+                  Margin="8"/>
+            <Label Text="35 items found." Grid.Column="1"/>
+        </StackLayout>
+
+
+
+       
+        
+    </Grid>
+   
+</ContentPage>
