@@ -70,7 +70,7 @@
                   Command="{Binding GetMonkeysCommand}"
                   IsEnabled="{Binding IsNotBusy}"
                   Margin="8"/>
-            <Label Text="35 items found." Grid.Column="1"/>
+            <Label Text="{Binding TotalCount, StringFormat='Items count: {0}'}" Grid.Column="1" FontAttributes="Bold" />
         </StackLayout>
 
 

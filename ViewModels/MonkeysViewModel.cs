@@ -1,4 +1,5 @@
-﻿using CommunityToolkit.Mvvm.Input;
+﻿using CommunityToolkit.Mvvm.ComponentModel;
+using CommunityToolkit.Mvvm.Input;
 using Datalogic.Models;
 using Datalogic.Services;
 using Datalogic.Views;
@@ -12,11 +13,15 @@ namespace Datalogic.ViewModels
         readonly MonkeyService monkeyService;
         public ObservableCollection<Monkey> Monkeys { get; } = [];
 
+        [ObservableProperty]
+        public int totalCount = 0;
+
+
+
         public MonkeysViewModel(MonkeyService monkeyService)
         {
             Title = "Monkey Finder [Datalogic]";
             this.monkeyService = monkeyService;
-          
         }
 
         [RelayCommand]
@@ -48,6 +53,7 @@ namespace Datalogic.ViewModels
                 foreach (var monkey in monkeys)
                     Monkeys.Add(monkey);
 
+                OnCalculateMonkeys();
 
             }
             catch (Exception ex)
@@ -61,5 +67,10 @@ namespace Datalogic.ViewModels
             }
             
         }
+
+        public void OnCalculateMonkeys() 
+        {
+            TotalCount = monkeyService.CalculateMonkey();
+        } 
     }
 } 

@@ -30,5 +30,13 @@ namespace Datalogic.Services
 
             return monkeyList!;
         }
+
+        public int CalculateMonkey() 
+        {
+            if (monkeyList == null || monkeyList.Count == 0)
+                return 0;
+
+            return monkeyList.Count();
+        } 
     }
 }

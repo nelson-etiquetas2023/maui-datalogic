@@ -5,6 +5,8 @@ namespace Datalogic.Models
     {
         public int ProductId { get; set; }
         public string ProductName { get; set; } = null!;
-        public int Existencia { get; set; }
+        public string Ubication { get; set; } = null!;
+        public int Quantity { get; set; }
+        public string Codebar { get; set; } = null!;
     }
 }

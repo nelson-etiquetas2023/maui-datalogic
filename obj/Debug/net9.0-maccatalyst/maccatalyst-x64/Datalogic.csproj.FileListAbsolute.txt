@@ -299,3 +299,4 @@ C:\Programacion\Datalogic\obj\Debug\net9.0-maccatalyst\maccatalyst-x64\refint\Da
 C:\Programacion\Datalogic\obj\Debug\net9.0-maccatalyst\maccatalyst-x64\Datalogic.pdb
 C:\Programacion\Datalogic\obj\Debug\net9.0-maccatalyst\maccatalyst-x64\Datalogic.genruntimeconfig.cache
 C:\Programacion\Datalogic\obj\Debug\net9.0-maccatalyst\maccatalyst-x64\ref\Datalogic.dll
+C:\Programacion\Datalogic\obj\Debug\net9.0-maccatalyst\maccatalyst-x64\Datalogic.sourcelink.json

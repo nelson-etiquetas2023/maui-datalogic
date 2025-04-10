@@ -22,6 +22,10 @@
         <member name="T:Datalogic.ViewModels.MonkeysViewModel">
             <inheritdoc/>
             <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="P:Datalogic.ViewModels.MonkeysViewModel.TotalCount">
+            <inheritdoc cref="F:Datalogic.ViewModels.MonkeysViewModel.totalCount"/>
         </member>
         <member name="F:Datalogic.ViewModels.MonkeysViewModel.goToDetailsCommand">
             <summary>The backing field for <see cref="P:Datalogic.ViewModels.MonkeysViewModel.GoToDetailsCommand"/>.</summary>
@@ -71,6 +75,9 @@
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Monkey">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Monkey" generated properties.</summary>
         </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.TotalCount">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "TotalCount" generated properties.</summary>
+        </member>
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.IsRefreshing">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "IsRefreshing" generated properties.</summary>
         </member>
@@ -97,6 +104,9 @@
         </member>
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Monkey">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Monkey" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.TotalCount">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "TotalCount" generated properties.</summary>
         </member>
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.IsRefreshing">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "IsRefreshing" generated properties.</summary>

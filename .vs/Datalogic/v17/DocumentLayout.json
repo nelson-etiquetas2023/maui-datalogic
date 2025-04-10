@@ -1,7 +1,16 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Programacion\\Datalogic\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{9E5E8FF9-54DC-47D8-B376-C09D0147DE40}|Datalogic.csproj|c:\\programacion\\datalogic\\mainpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{9E5E8FF9-54DC-47D8-B376-C09D0147DE40}|Datalogic.csproj|solutionrelative:mainpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9E5E8FF9-54DC-47D8-B376-C09D0147DE40}|Datalogic.csproj|c:\\programacion\\datalogic\\views\\detailspage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{9E5E8FF9-54DC-47D8-B376-C09D0147DE40}|Datalogic.csproj|solutionrelative:views\\detailspage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,7 +18,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
@@ -26,6 +35,32 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "DetailsPage.xaml",
+              "DocumentMoniker": "C:\\Programacion\\Datalogic\\Views\\DetailsPage.xaml",
+              "RelativeDocumentMoniker": "Views\\DetailsPage.xaml",
+              "ToolTip": "C:\\Programacion\\Datalogic\\Views\\DetailsPage.xaml",
+              "RelativeToolTip": "Views\\DetailsPage.xaml",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-04-10T19:29:33.546Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MainPage.xaml",
+              "DocumentMoniker": "C:\\Programacion\\Datalogic\\MainPage.xaml",
+              "RelativeDocumentMoniker": "MainPage.xaml",
+              "ToolTip": "C:\\Programacion\\Datalogic\\MainPage.xaml",
+              "RelativeToolTip": "MainPage.xaml",
+              "ViewState": "AgIAAEEAAAAAAAAAAAAAAEgAAAB1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-04-10T19:27:14.536Z",
+              "EditorCaption": ""
             }
           ]
         },
