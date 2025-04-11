@@ -18,6 +18,7 @@
                    Grid.ColumnSpan="3"
                    Text="{Binding FilterText}"
                    SearchCommand="{Binding SearchMonkeysCommand}"
+                   TextChanged="SearchBar_TextChanged"   
                    />
         <ScrollView Grid.Row="1" Grid.ColumnSpan="3">
             <CollectionView 

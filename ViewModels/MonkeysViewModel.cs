@@ -62,7 +62,7 @@ namespace Datalogic.ViewModels
         }
 
         [RelayCommand]
-        async Task GetMonkeysAsync()
+        public async Task GetMonkeysAsync()
         {
             if (IsBusy)
                 return;
