@@ -1,5 +1,5 @@
-﻿
-using Datalogic.Models;
+﻿using Datalogic.Models;
+using System.Collections.ObjectModel;
 using System.Net.Http.Json;
 
 namespace Datalogic.Services
@@ -7,7 +7,7 @@ namespace Datalogic.Services
     public class MonkeyService
     {
         readonly HttpClient httpClient;
-        List<Monkey>? monkeyList = [];
+        public List<Monkey>? monkeyList = [];
 
         public MonkeyService()
         {
@@ -36,7 +36,20 @@ namespace Datalogic.Services
             if (monkeyList == null || monkeyList.Count == 0)
                 return 0;
 
-            return monkeyList.Count();
-        } 
+            return monkeyList.Count;
+        }
+
+        public ObservableCollection<Monkey> SearchMonkeys(string filterText,ObservableCollection<Monkey> lista) 
+        {
+            var monkeyListFiltered = new ObservableCollection<Monkey>();
+
+            if (lista == null || lista.Count <= 0 || string.IsNullOrEmpty(filterText))
+                return monkeyListFiltered;
+
+            monkeyListFiltered =  [.. lista.Where(x => x.Name.Contains(filterText, StringComparison.CurrentCultureIgnoreCase ))];
+
+            return monkeyListFiltered;
+
+        }        
     }
 }

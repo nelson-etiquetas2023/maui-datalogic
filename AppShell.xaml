@@ -34,5 +34,11 @@
     <FlyoutItem Title="Orders" Icon="splash.png">
         <ShellContent ContentTemplate="{DataTemplate views:OrdersPage}" />
     </FlyoutItem>
+    <FlyoutItem Title="Users" Icon="splash.png">
+        <ShellContent ContentTemplate="{DataTemplate views:UsersPage}" />
+    </FlyoutItem>
+    <FlyoutItem Title="Parameters" Icon="splash.png">
+        <ShellContent ContentTemplate="{DataTemplate views:ParametersPage}" />
+    </FlyoutItem>
 
 </Shell>

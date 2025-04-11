@@ -23,9 +23,19 @@
             <inheritdoc/>
             <inheritdoc/>
             <inheritdoc/>
+            <inheritdoc/>
         </member>
         <member name="P:Datalogic.ViewModels.MonkeysViewModel.TotalCount">
             <inheritdoc cref="F:Datalogic.ViewModels.MonkeysViewModel.totalCount"/>
+        </member>
+        <member name="P:Datalogic.ViewModels.MonkeysViewModel.FilterText">
+            <inheritdoc cref="F:Datalogic.ViewModels.MonkeysViewModel.filterText"/>
+        </member>
+        <member name="F:Datalogic.ViewModels.MonkeysViewModel.searchMonkeysCommand">
+            <summary>The backing field for <see cref="P:Datalogic.ViewModels.MonkeysViewModel.SearchMonkeysCommand"/>.</summary>
+        </member>
+        <member name="P:Datalogic.ViewModels.MonkeysViewModel.SearchMonkeysCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:Datalogic.ViewModels.MonkeysViewModel.OnSearchMonkeysAsync"/>.</summary>
         </member>
         <member name="F:Datalogic.ViewModels.MonkeysViewModel.goToDetailsCommand">
             <summary>The backing field for <see cref="P:Datalogic.ViewModels.MonkeysViewModel.GoToDetailsCommand"/>.</summary>
@@ -78,6 +88,9 @@
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.TotalCount">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "TotalCount" generated properties.</summary>
         </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.FilterText">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "FilterText" generated properties.</summary>
+        </member>
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.IsRefreshing">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "IsRefreshing" generated properties.</summary>
         </member>
@@ -107,6 +120,9 @@
         </member>
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.TotalCount">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "TotalCount" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.FilterText">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "FilterText" generated properties.</summary>
         </member>
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.IsRefreshing">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "IsRefreshing" generated properties.</summary>

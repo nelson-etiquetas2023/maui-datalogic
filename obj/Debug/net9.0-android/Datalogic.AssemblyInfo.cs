@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Datalogic")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+5c4dd904fd1a9b52bd9d7da94cf769215e7458b0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+69febe0ab149e42cc338ce303cd6a1a7dce4dc23")]
 [assembly: System.Reflection.AssemblyProductAttribute("Datalogic")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Datalogic")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

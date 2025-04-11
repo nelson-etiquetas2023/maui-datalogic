@@ -13,7 +13,12 @@
           ColumnSpacing="5"
           RowSpacing="0">
 
-        <SearchBar Placeholder="Search items..." Grid.Row="0" Grid.ColumnSpan="3"/>
+        <SearchBar Placeholder="Search items..." 
+                   Grid.Row="0" 
+                   Grid.ColumnSpan="3"
+                   Text="{Binding FilterText}"
+                   SearchCommand="{Binding SearchMonkeysCommand}"
+                   />
         <ScrollView Grid.Row="1" Grid.ColumnSpan="3">
             <CollectionView 
                 BackgroundColor="Transparent"

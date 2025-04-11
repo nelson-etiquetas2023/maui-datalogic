@@ -14,9 +14,10 @@ namespace Datalogic.ViewModels
         public ObservableCollection<Monkey> Monkeys { get; } = [];
 
         [ObservableProperty]
-        public int totalCount = 0;
+        private int totalCount = 0;
 
-
+        [ObservableProperty]
+        private string? filterText = string.Empty;
 
         public MonkeysViewModel(MonkeyService monkeyService)
         {
@@ -25,19 +26,43 @@ namespace Datalogic.ViewModels
         }
 
         [RelayCommand]
-        async Task GoToDetailsAsync(Monkey monkey) 
+        public async Task OnSearchMonkeysAsync()
+        {
+            if (string.IsNullOrEmpty(FilterText))
+            {
+                await Shell.Current.DisplayAlert("Error", "Filter text cannot be empty.", "OK");
+                return;
+            }
+
+            if (Monkeys is null)
+                return;
+
+            // Clear the existing collection and add the filtered results instead of reassigning the property
+            var filteredMonkeys = monkeyService.SearchMonkeys(FilterText, Monkeys);
+            Monkeys.Clear();
+            foreach (var monkey in filteredMonkeys)
+            {
+                Monkeys.Add(monkey);
+            }
+
+            var monkeysFilters = Monkeys.Count;
+            TotalCount = monkeysFilters;
+        }
+
+        [RelayCommand]
+        async Task GoToDetailsAsync(Monkey monkey)
         {
             if (monkey is null)
                 return;
 
             await Shell.Current.GoToAsync(nameof(DetailsPage), true, new Dictionary<string, object>
-            {
-                { "Monkey", monkey }
-            });
+                    {
+                        { "Monkey", monkey }
+                    });
         }
 
         [RelayCommand]
-        async Task GetMonkeysAsync() 
+        async Task GetMonkeysAsync()
         {
             if (IsBusy)
                 return;
@@ -47,30 +72,28 @@ namespace Datalogic.ViewModels
                 IsBusy = true;
                 var monkeys = await monkeyService.GetMonkeys();
 
-                if(Monkeys.Count != 0)
+                if (Monkeys.Count != 0)
                     Monkeys.Clear();
 
                 foreach (var monkey in monkeys)
                     Monkeys.Add(monkey);
 
                 OnCalculateMonkeys();
-
             }
             catch (Exception ex)
             {
-               Debug.WriteLine($"Unable to get monkeys: {ex}");
-               await Shell.Current.DisplayAlert("Error", "Unable to get monkeys", "OK");
+                Debug.WriteLine($"Unable to get monkeys: {ex}");
+                await Shell.Current.DisplayAlert("Error", "Unable to get monkeys", "OK");
             }
-            finally 
+            finally
             {
                 IsBusy = false;
             }
-            
         }
 
-        public void OnCalculateMonkeys() 
+        public void OnCalculateMonkeys()
         {
             TotalCount = monkeyService.CalculateMonkey();
-        } 
+        }
     }
 } 
